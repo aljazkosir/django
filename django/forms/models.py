@@ -1148,6 +1148,9 @@ class ModelChoiceIteratorValue:
     def __str__(self):
         return str(self.value)
 
+    def __hash__(self):
+        return hash(self.value)
+
     def __eq__(self, other):
         if isinstance(other, ModelChoiceIteratorValue):
             other = other.value
